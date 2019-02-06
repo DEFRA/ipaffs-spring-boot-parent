@@ -12,11 +12,18 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <springboot.version>2.0.5.RELEASE</springboot.version>
         <org.projectlombok.version>1.16.20</org.projectlombok.version>
         <junit.jupiter.version>5.0.2</junit.jupiter.version>
+        <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
         <mockito.inline.version>2.13.0</mockito.inline.version>
         <surefire.junit4.version>2.20</surefire.junit4.version>
+        <applicationinsights.version>2.0.0</applicationinsights.version>
+        <json.patch.version>1.9</json.patch.version>
+        <mockito.all.version>1.9.5</mockito.all.version>
+        <equalsverifier.version>2.4.6</equalsverifier.version>
+        <h2.version>1.4.197</h2.version>
+        <hibernate.entitymanager.version>5.2.9.Final</hibernate.entitymanager.version>
+        <hibernate.java8.version>5.0.5.Final</hibernate.java8.version>
     </properties>
 
     <parent>
@@ -27,34 +34,48 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.spring.framework.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>${springboot.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.spring.framework.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>${springboot.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.spring.framework.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${springboot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>
-            <version>${springboot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>applicationinsights-web</artifactId>
+            <version>${applicationinsights.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>applicationinsights-core</artifactId>
+            <version>${applicationinsights.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>applicationinsights-logging-logback</artifactId>
+            <version>${applicationinsights.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fge</groupId>
+            <artifactId>json-patch</artifactId>
+            <version>${json.patch.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${springboot.version}</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -66,7 +87,6 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
-            <version>${springboot.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -97,6 +117,36 @@
             <groupId>org.apache.maven.surefire</groupId>
             <artifactId>surefire-junit4</artifactId>
             <version>${surefire.junit4.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.all.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>nl.jqno.equalsverifier</groupId>
+            <artifactId>equalsverifier</artifactId>
+            <version>${equalsverifier.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.entitymanager.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-java8</artifactId>
+            <version>${hibernate.java8.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
