@@ -33,6 +33,7 @@
         <hibernate.entitymanager.version>5.2.9.Final</hibernate.entitymanager.version>
         <hibernate.java8.version>5.0.5.Final</hibernate.java8.version>
 
+        <maven.failsafe.version>2.20</maven.failsafe.version>
         <maven.compiler.source.version>1.8</maven.compiler.source.version>
         <maven.compiler.target.version>1.8</maven.compiler.target.version>
         <jacoco.maven.plugin.version>0.8.0</jacoco.maven.plugin.version>
@@ -261,11 +262,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>${maven.resources.plugin.version}</version>
                 <configuration>
@@ -275,7 +271,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.20</version>
+                <version>${maven.failsafe.version}</version>
                 <configuration>
                     <includes>
                         <include>**/*IT.java</include>
