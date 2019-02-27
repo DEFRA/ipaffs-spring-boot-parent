@@ -20,6 +20,14 @@
     <java.version>1.8</java.version>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>release</id>
+      <name>Releases</name>
+      <url>${repo.releases.url}</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>

@@ -14,16 +14,11 @@
   </scm>
 
   <distributionManagement>
-    <repository> <!-- FIXME: change to actual release repo -->
+    <repository>
       <id>release</id>
-      <name>Local repository</name>
-      <url>file://${user.home}/.m2/repository</url>
+      <name>Releases</name>
+      <url>${repo.releases.url}</url>
     </repository>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <name>maven-snapshots-local</name>
-      <url>https://artifactory.azure.defra.cloud/artifactory/maven-snapshots-local/</url>
-    </snapshotRepository>
   </distributionManagement>
 
   <modules>
@@ -33,6 +28,7 @@
   </modules>
 
   <build>
+    <pluginManagement>
     <plugins>
     <plugin>
       <artifactId>maven-release-plugin</artifactId>
@@ -44,5 +40,6 @@
       </configuration>
     </plugin>
     </plugins>
+    </pluginManagement>
   </build>
 </project>
