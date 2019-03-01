@@ -18,6 +18,7 @@
     <failsafe.version>2.20</failsafe.version>
     <maven.compiler.version>3.7.0</maven.compiler.version>
     <java.version>1.8</java.version>
+    <common.security.version>0.0.1-SNAPSHOT</common.security.version>
   </properties>
 
   <distributionManagement>
@@ -53,7 +54,7 @@
     <dependency>
       <groupId>uk.gov.defra.tracesx</groupId>
       <artifactId>TracesX-SpringBoot-CommonSecurity-Tests</artifactId>
-      <version>0.0.6</version>
+      <version>${common.security.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
