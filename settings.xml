@@ -22,39 +22,39 @@
         <repo.releases.url>file://${user.home}/.m2/repository</repo.releases.url>
       </properties>
       <repositories>
-        <repository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>central</id>
-          <name>repocentral</name>
-          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
-        </repository>
+        <!--<repository>-->
+          <!--<snapshots>-->
+            <!--<enabled>false</enabled>-->
+          <!--</snapshots>-->
+          <!--<id>central</id>-->
+          <!--<name>repocentral</name>-->
+          <!--<url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>-->
+        <!--</repository>-->
         <repository> <!-- FIXME: change to actual release repo -->
           <id>release</id>
-          <snapshots>
+            <snapshots>
             <enabled>false</enabled>
           </snapshots>
           <name>Local repository</name>
           <url>${repo.releases.url}</url>
         </repository>
       </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>central</id>
-          <name>repocentral</name>
-          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
-        </pluginRepository>
-        <pluginRepository>
-          <snapshots/>
-          <id>snapshots</id>
-          <name>repocentral</name>
-          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
-        </pluginRepository>
-      </pluginRepositories>
+      <!--<pluginRepositories>-->
+        <!--<pluginRepository>-->
+          <!--<snapshots>-->
+            <!--<enabled>false</enabled>-->
+          <!--</snapshots>-->
+          <!--<id>central</id>-->
+          <!--<name>repocentral</name>-->
+          <!--<url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>-->
+        <!--</pluginRepository>-->
+        <!--<pluginRepository>-->
+          <!--<snapshots/>-->
+          <!--<id>snapshots</id>-->
+          <!--<name>repocentral</name>-->
+          <!--<url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>-->
+        <!--</pluginRepository>-->
+      <!--</pluginRepositories>-->
     </profile>
   </profiles>
   <activeProfiles>
