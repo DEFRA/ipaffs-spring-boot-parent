@@ -16,6 +16,7 @@
     <jackson.version>2.9.7</jackson.version>
     <restassured.version>3.0.6</restassured.version>
     <failsafe.version>2.20</failsafe.version>
+    <org.assertj.core.version>3.12.1</org.assertj.core.version>
     <maven.compiler.version>3.7.0</maven.compiler.version>
     <java.version>1.8</java.version>
     <common.security.version>0.0.1-SNAPSHOT</common.security.version>
@@ -55,6 +56,12 @@
       <groupId>uk.gov.defra.tracesx</groupId>
       <artifactId>TracesX-SpringBoot-CommonSecurity-Tests</artifactId>
       <version>${common.security.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${org.assertj.core.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
