@@ -1,9 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>spring-boot-parent-multimodule-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>TracesX-SpringBoot-CommonSecurity</name>
   <description>Maven multi-module parent for the spring boot parent poms</description>
   <packaging>pom</packaging>
@@ -11,6 +9,7 @@
 
   <scm>
     <connection>scm:git:git@giteux.azure.defra.cloud:imports/spring-boot-parent.git</connection>
+    <tag>0.0.1-11</tag>
   </scm>
 
   <distributionManagement>
