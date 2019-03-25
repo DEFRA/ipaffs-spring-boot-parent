@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>integration-test-parent</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
   <name>TracesX-Integration-Test-Parent</name>
   <packaging>pom</packaging>
 
@@ -17,7 +17,7 @@
 
   <scm>
     <connection>${parent.scm.connection}</connection>
-    <tag>HEAD</tag>
+    <tag>0.0.2-5</tag>
   </scm>
 
   <properties>

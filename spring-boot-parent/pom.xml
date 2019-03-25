@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -25,7 +25,7 @@
 
   <scm>
     <connection>${parent.scm.connection}</connection>
-    <tag>HEAD</tag>
+    <tag>0.0.2-5</tag>
   </scm>
 
   <properties>
