@@ -10,7 +10,7 @@
   <groupId>uk.gov.defra.tracesx</groupId>
 
   <scm>
-    <connection>scm:git:git@giteux.azure.defra.cloud:imports/spring-boot-parent.git</connection>
+    <connection>scm:git:https://giteux.azure.defra.cloud/imports/spring-boot-parent.git</connection>
   </scm>
 
   <distributionManagement>
