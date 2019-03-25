@@ -7,6 +7,19 @@
   <name>TracesX-Integration-Test-Parent</name>
   <packaging>pom</packaging>
 
+  <distributionManagement>
+    <repository>
+      <id>release</id>
+      <name>Releases</name>
+      <url>${repo.releases.url}</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>${parent.scm.connection}</connection>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -19,14 +32,6 @@
     <java.version>1.8</java.version>
     <common.security.version>1.0.0</common.security.version>
   </properties>
-
-  <distributionManagement>
-    <repository>
-      <id>release</id>
-      <name>Releases</name>
-      <url>${repo.releases.url}</url>
-    </repository>
-  </distributionManagement>
 
   <dependencies>
     <dependency>

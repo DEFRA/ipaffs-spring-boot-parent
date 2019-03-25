@@ -15,9 +15,21 @@
     <version>2.0.5.RELEASE</version>
   </parent>
 
+  <distributionManagement>
+    <repository>
+      <id>release</id>
+      <name>Releases</name>
+      <url>${repo.releases.url}</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>${parent.scm.connection}</connection>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
     <org.projectlombok.version>1.16.20</org.projectlombok.version>
     <junit.jupiter.version>5.0.2</junit.jupiter.version>
     <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
@@ -95,8 +107,7 @@
       <version>${org.projectlombok.version}</version>
       <type>jar</type>
     </dependency>
-    <!-- TODO: It would be nice to have a separate persistence parent -->
-    <!-- This would require a separate project though -->
+    <!-- TODO: IMTS-4606 It would be nice to have a separate persistence parent -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -178,14 +189,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <distributionManagement>
-    <repository>
-      <id>release</id>
-      <name>Releases</name>
-      <url>${repo.releases.url}</url>
-    </repository>
-  </distributionManagement>
 
   <build>
     <pluginManagement>
