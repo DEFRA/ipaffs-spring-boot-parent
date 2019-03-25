@@ -9,8 +9,13 @@
   <packaging>pom</packaging>
   <groupId>uk.gov.defra.tracesx</groupId>
 
+  <properties>
+    <project.scm.id>gitlab</project.scm.id>
+  </properties>
+
   <scm>
     <connection>scm:git:https://giteux.azure.defra.cloud/imports/spring-boot-parent.git</connection>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
