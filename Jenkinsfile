@@ -16,19 +16,18 @@ pipeline {
     stage('Package') {
       steps {
         getFile 'settings/maven.xml'
-        sh 'mvn -f spring-boot-parent/pom.xml package'
-        sh 'mvn -f integration-test-parent/pom.xml package'
+        sh 'mvn -f pom.xml package'
       }
     }
 
     stage('Deploy Maven Artifact') {
 
       when {
-        environment name: 'BRANCH_NAME', value: 'feature/IMTA-4605-no-mulitmodule-parent-poms'
+        environment name: 'BRANCH_NAME', value: 'master'
       }
 
       steps {
-        mvnDeploy("${BRANCH_NAME}", "spring-boot-parent/pom.xml")
+        mvnDeploy("${BRANCH_NAME}", "pom.xml")
       }
     }
   }
