@@ -27,9 +27,7 @@ pipeline {
       }
 
       steps {
-        withCredentials([string(credentialsId: 'JENKINS_GITLAB_TOKEN', variable: 'TOKEN')]) {
-          mvnDeploy("${BRANCH_NAME}", "${SERVICE_NAME}", "${TOKEN}")
-        }
+        mvnDeploy("${BRANCH_NAME}", "pom.xml")
       }
     }
   }
