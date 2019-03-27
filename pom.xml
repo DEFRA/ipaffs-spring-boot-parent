@@ -52,7 +52,7 @@
     <surefire.version>2.14.1</surefire.version>
     <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
     <surefire.version>2.20</surefire.version>
-    <common.security.version>1.0.0</common.security.version>
+    <common.security.version>1.0.1</common.security.version>
     <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
   </properties>
 
