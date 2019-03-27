@@ -23,7 +23,7 @@ pipeline {
     stage('Deploy Maven Artifact') {
 
       when {
-        environment name: 'BRANCH_NAME', value: 'master'
+        environment name: 'BRANCH_NAME', value: 'feature/IMTA-4605-no-mulitmodule-parent-poms'
       }
 
       steps {
