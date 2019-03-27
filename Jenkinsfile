@@ -29,7 +29,6 @@ pipeline {
 
       steps {
         mvnDeploy("${BRANCH_NAME}", "spring-boot-parent/pom.xml")
-        mvnDeploy("${BRANCH_NAME}", "integration-test-parent/pom.xml")
       }
     }
   }

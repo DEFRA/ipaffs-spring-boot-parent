@@ -24,11 +24,12 @@
   </distributionManagement>
 
   <scm>
-    <connection>${parent.scm.connection}</connection>
+    <connection>scm:git:https://giteux.azure.defra.cloud/imports/spring-boot-parent.git</connection>
     <tag>HEAD</tag>
   </scm>
 
   <properties>
+    <project.scm.id>gitlab</project.scm.id>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <org.projectlombok.version>1.16.20</org.projectlombok.version>
     <junit.jupiter.version>5.0.2</junit.jupiter.version>
