@@ -43,7 +43,6 @@
     <h2.version>1.4.197</h2.version>
     <hibernate.entitymanager.version>5.2.9.Final</hibernate.entitymanager.version>
     <hibernate.java8.version>5.0.5.Final</hibernate.java8.version>
-
     <maven.failsafe.version>2.20</maven.failsafe.version>
     <maven.compiler.source.version>1.8</maven.compiler.source.version>
     <maven.compiler.target.version>1.8</maven.compiler.target.version>
@@ -52,9 +51,31 @@
     <surefire.version>2.14.1</surefire.version>
     <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
     <surefire.version>2.20</surefire.version>
-    <common.security.version>1.0.1</common.security.version>
+    <common.security.version>1.0.2</common.security.version>
     <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
+    <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
+    <azure.springboot.metricsstarter.version>2.1.2</azure.springboot.metricsstarter.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-core</artifactId>
+        <version>${io.micrometer.micrometer-core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-spring-boot-metrics-starter</artifactId>
+        <version>${azure.springboot.metricsstarter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.everit-org.json-schema</groupId>
+        <artifactId>org.everit.json.schema</artifactId>
+        <version>${org.everit.json.schema.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
