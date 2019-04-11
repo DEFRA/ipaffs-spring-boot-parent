@@ -47,7 +47,6 @@
     <maven.compiler.source.version>1.8</maven.compiler.source.version>
     <maven.compiler.target.version>1.8</maven.compiler.target.version>
     <jacoco.maven.plugin.version>0.8.0</jacoco.maven.plugin.version>
-    <owasp.version>3.3.2</owasp.version>
     <surefire.version>2.14.1</surefire.version>
     <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
     <surefire.version>2.20</surefire.version>
@@ -55,6 +54,7 @@
     <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
     <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
     <azure.springboot.metricsstarter.version>2.1.2</azure.springboot.metricsstarter.version>
+    <owasp.version>4.0.2</owasp.version>
   </properties>
 
   <dependencyManagement>
@@ -353,5 +353,16 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>
