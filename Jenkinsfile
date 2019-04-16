@@ -16,7 +16,7 @@ pipeline {
     stage('Package') {
       steps {
         getFile 'settings/maven.xml'
-        sh 'mvn -f pom.xml package'
+        sh 'mvn -f pom.xml package --settings ./settings/maven.xml'
       }
     }
 
