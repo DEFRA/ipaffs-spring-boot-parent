@@ -36,7 +36,7 @@
     <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
     <mockito.inline.version>2.13.0</mockito.inline.version>
     <surefire.junit4.version>2.20</surefire.junit4.version>
-    <applicationinsights.version>2.0.0</applicationinsights.version>
+    <applicationinsights.version>2.3.1</applicationinsights.version>
     <json.patch.version>1.9</json.patch.version>
     <mockito.all.version>1.9.5</mockito.all.version>
     <equalsverifier.version>2.4.6</equalsverifier.version>
@@ -54,6 +54,7 @@
     <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
     <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
     <azure.springboot.metricsstarter.version>2.1.2</azure.springboot.metricsstarter.version>
+    <azure.applicationinsights.springboot.starter.version>1.1.2</azure.applicationinsights.springboot.starter.version>
     <owasp.version>4.0.2</owasp.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
   </properties>
@@ -106,18 +107,40 @@
     </dependency>
     <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>applicationinsights-web</artifactId>
-      <version>${applicationinsights.version}</version>
+      <artifactId>azure-spring-boot-metrics-starter</artifactId>
     </dependency>
     <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>applicationinsights-core</artifactId>
+      <artifactId>applicationinsights-spring-boot-starter</artifactId>
+      <version>${azure.applicationinsights.springboot.starter.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>applicationinsights-web</artifactId>
       <version>${applicationinsights.version}</version>
     </dependency>
     <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>applicationinsights-logging-logback</artifactId>
       <version>${applicationinsights.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.7</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.3</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpasyncclient</artifactId>
+      <version>4.1.3</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.github.fge</groupId>
@@ -241,6 +264,12 @@
               <goals>
                 <goal>repackage</goal>
               </goals>
+            </execution>
+            <execution>
+              <id>default-cli</id>
+              <configuration>
+                <jvmArguments>-Dspring.config.additional-location=file:.</jvmArguments>
+              </configuration>
             </execution>
           </executions>
         </plugin>
