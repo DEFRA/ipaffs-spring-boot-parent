@@ -269,6 +269,10 @@
               <id>default-cli</id>
               <configuration>
                 <jvmArguments>-Dspring.config.additional-location=file:.</jvmArguments>
+                <profiles>
+                  <profile>default</profile>
+                  <profile>local</profile>
+                </profiles>
               </configuration>
             </execution>
           </executions>
