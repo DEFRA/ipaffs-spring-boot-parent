@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>1.0.10-SNAPSHOT</version>
+  <version>1.0.11-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -57,6 +57,7 @@
     <azure.applicationinsights.springboot.starter.version>1.1.2</azure.applicationinsights.springboot.starter.version>
     <owasp.version>5.2.0</owasp.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
+    <jackson.databind.version>2.9.10</jackson.databind.version>
   </properties>
 
   <dependencyManagement>
@@ -233,6 +234,11 @@
       <artifactId>hibernate-java8</artifactId>
       <version>${hibernate.java8.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.databind.version}</version>
     </dependency>
   </dependencies>
 
