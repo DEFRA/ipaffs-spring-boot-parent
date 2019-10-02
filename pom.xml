@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.5.RELEASE</version>
+    <version>2.0.9.RELEASE</version>
   </parent>
 
   <distributionManagement>
@@ -30,37 +30,101 @@
 
   <properties>
     <project.scm.id>gitlab</project.scm.id>
+
+    <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.projectlombok.version>1.16.20</org.projectlombok.version>
-    <junit.jupiter.version>5.0.2</junit.jupiter.version>
-    <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
-    <mockito.inline.version>2.13.0</mockito.inline.version>
-    <surefire.junit4.version>2.20</surefire.junit4.version>
+
+    <tracesx.common.version>1.0.12</tracesx.common.version>
+    <tracesx.common.security.version>1.0.17</tracesx.common.security.version>
+    <tracesx.notification.schema.version>1.0.34</tracesx.notification.schema.version>
+
+    <!-- Spring Boot dependency version overrides -->
+    <commons.lang3.version>3.8.1</commons.lang3.version>
+    <jackson.version>2.9.10</jackson.version>
+    <lombok.version>1.18.4</lombok.version>
+    <netty.version>4.1.42.Final</netty.version>
+    <spring-security.version>5.0.13.RELEASE</spring-security.version>
+    <tomcat.version>8.5.46</tomcat.version>
+    <!-- End Spring Boot dependency version overrides -->
+
     <applicationinsights.version>2.3.1</applicationinsights.version>
-    <json.patch.version>1.9</json.patch.version>
-    <mockito.all.version>1.9.5</mockito.all.version>
-    <equalsverifier.version>2.4.6</equalsverifier.version>
-    <h2.version>1.4.197</h2.version>
-    <hibernate.entitymanager.version>5.2.9.Final</hibernate.entitymanager.version>
-    <hibernate.java8.version>5.0.5.Final</hibernate.java8.version>
-    <maven.failsafe.version>2.20</maven.failsafe.version>
-    <maven.compiler.source.version>1.8</maven.compiler.source.version>
-    <maven.compiler.target.version>1.8</maven.compiler.target.version>
-    <jacoco.maven.plugin.version>0.8.0</jacoco.maven.plugin.version>
-    <surefire.version>2.14.1</surefire.version>
-    <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
-    <surefire.version>2.20</surefire.version>
-    <common.security.version>1.0.15</common.security.version>
-    <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
-    <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
     <azure.springboot.metricsstarter.version>2.1.2</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>1.1.2</azure.applicationinsights.springboot.starter.version>
-    <owasp.version>5.2.0</owasp.version>
+    <commons.beanutils.version>1.9.4</commons.beanutils.version>
+    <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
+    <equalsverifier.version>2.4.6</equalsverifier.version>
+    <h2.version>1.4.197</h2.version>
+    <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
+    <jacoco.maven.plugin.version>0.8.0</jacoco.maven.plugin.version>
+    <jjwt.version>0.10.5</jjwt.version>
+    <json.patch.version>1.9</json.patch.version>
+    <json-schema-java7.version>1.4.1</json-schema-java7.version>
+    <junit.jupiter.version>5.0.2</junit.jupiter.version>
+    <jwks-rsa.version>0.3.0</jwks-rsa.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
+    <maven.failsafe.version>2.20</maven.failsafe.version>
+    <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
+    <mockito.all.version>1.9.5</mockito.all.version>
+    <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
+    <neovisionaries.version>1.22</neovisionaries.version>
+    <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
+    <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
+    <owasp.version>5.2.2</owasp.version>
+    <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
+    <surefire.junit4.version>2.20</surefire.junit4.version>
+    <surefire.version>2.20</surefire.version>
+    <testng.version>6.14.3</testng.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>uk.gov.defra.tracesx</groupId>
+        <artifactId>TracesX-SpringBoot-Common-Azure</artifactId>
+        <version>${tracesx.common.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>uk.gov.defra.tracesx</groupId>
+        <artifactId>TracesX-SpringBoot-Common-Health</artifactId>
+        <version>${tracesx.common.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>uk.gov.defra.tracesx</groupId>
+        <artifactId>TracesX-SpringBoot-Common-Event</artifactId>
+        <version>${tracesx.common.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>uk.gov.defra.tracesx</groupId>
+        <artifactId>TracesX-SpringBoot-CommonSecurity-Config</artifactId>
+        <version>${tracesx.common.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>uk.gov.defra.tracesx</groupId>
+        <artifactId>notification-schema-core</artifactId>
+        <version>${tracesx.notification.schema.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>uk.gov.defra.tracesx</groupId>
+        <artifactId>notification-schema-java</artifactId>
+        <version>${tracesx.notification.schema.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-jwt</artifactId>
+        <version>${spring.security.jwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.auth0</groupId>
+        <artifactId>jwks-rsa</artifactId>
+        <version>${jwks-rsa.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>${commons.beanutils.version}</version>
+      </dependency>
       <dependency>
         <groupId>io.micrometer</groupId>
         <artifactId>micrometer-core</artifactId>
@@ -72,9 +136,104 @@
         <version>${azure.springboot.metricsstarter.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>applicationinsights-spring-boot-starter</artifactId>
+        <version>${azure.applicationinsights.springboot.starter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>applicationinsights-web</artifactId>
+        <version>${applicationinsights.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>applicationinsights-logging-logback</artifactId>
+        <version>${applicationinsights.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.fge</groupId>
+        <artifactId>json-patch</artifactId>
+        <version>${json.patch.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.github.everit-org.json-schema</groupId>
         <artifactId>org.everit.json.schema</artifactId>
         <version>${org.everit.json.schema.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.sqlserver</groupId>
+        <artifactId>mssql-jdbc</artifactId>
+        <version>${mssql.jdbc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit.jupiter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+        <version>${junit.jupiter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>${mockito.all.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.surefire</groupId>
+        <artifactId>surefire-junit4</artifactId>
+        <version>${surefire.junit4.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.jqno.equalsverifier</groupId>
+        <artifactId>equalsverifier</artifactId>
+        <version>${equalsverifier.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>${h2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.doctusoft</groupId>
+        <artifactId>json-schema-java7</artifactId>
+        <version>${json-schema-java7.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.neovisionaries</groupId>
+        <artifactId>nv-i18n</artifactId>
+        <version>${neovisionaries.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mashape.unirest</groupId>
+        <artifactId>unirest-java</artifactId>
+        <version>${com.mashape.unirest.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.owasp.encoder</groupId>
+        <artifactId>encoder</artifactId>
+        <version>${org.owasp.encoder.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-api</artifactId>
+        <version>${jjwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-impl</artifactId>
+        <version>${jjwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-jackson</artifactId>
+        <version>${jjwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>${testng.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -83,7 +242,6 @@
     <dependency>
       <groupId>uk.gov.defra.tracesx</groupId>
       <artifactId>TracesX-SpringBoot-CommonSecurity-Config</artifactId>
-      <version>${common.security.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -112,45 +270,34 @@
     <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>applicationinsights-spring-boot-starter</artifactId>
-      <version>${azure.applicationinsights.springboot.starter.version}</version>
     </dependency>
     <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>applicationinsights-web</artifactId>
-      <version>${applicationinsights.version}</version>
     </dependency>
     <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>applicationinsights-logging-logback</artifactId>
-      <version>${applicationinsights.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.7</version>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.5.3</version>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpasyncclient</artifactId>
-      <version>4.1.3</version>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.github.fge</groupId>
       <artifactId>json-patch</artifactId>
-      <version>${json.patch.version}</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>${org.projectlombok.version}</version>
       <type>jar</type>
     </dependency>
     <!-- TODO: IMTS-4606 It would be nice to have a separate persistence parent -->
@@ -161,7 +308,6 @@
     <dependency>
       <groupId>com.microsoft.sqlserver</groupId>
       <artifactId>mssql-jdbc</artifactId>
-      <version>${mssql.jdbc.version}</version>
     </dependency>
     <!-- END TODO -->
     <dependency>
@@ -183,55 +329,46 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
-      <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-inline</artifactId>
-      <version>${mockito.inline.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.surefire</groupId>
       <artifactId>surefire-junit4</artifactId>
-      <version>${surefire.junit4.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-all</artifactId>
-      <version>${mockito.all.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>nl.jqno.equalsverifier</groupId>
       <artifactId>equalsverifier</artifactId>
-      <version>${equalsverifier.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
-      <version>${h2.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>${hibernate.entitymanager.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-java8</artifactId>
-      <version>${hibernate.java8.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -276,15 +413,6 @@
               </configuration>
             </execution>
           </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
-          <configuration>
-            <source>${maven.compiler.source.version}</source>
-            <target>${maven.compiler.target.version}</target>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -354,6 +482,9 @@
               <version>${owasp.version}</version>
             </dependency>
           </dependencies>
+          <configuration>
+            <failBuildOnCVSS>7</failBuildOnCVSS>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -417,6 +548,9 @@
       <plugin>
         <groupId>org.owasp</groupId>
         <artifactId>dependency-check-maven</artifactId>
+        <configuration>
+          <suppressionFiles>suppressions.xml</suppressionFiles>
+        </configuration>
       </plugin>
     </plugins>
   </build>
