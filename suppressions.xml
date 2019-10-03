@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.1.xsd">
+  <suppress>
+    <notes><![CDATA[
+      Spring security JWT
+      See https://github.com/jeremylong/DependencyCheck/issues/1827
+      https://pivotal.io/security/cve-2018-1258
+      ]]></notes>
+    <gav>org.springframework.security:spring-security-jwt:1.0.10.RELEASE</gav>
+    <cpe>cpe:/a:pivotal_software:spring_security:1.0.10</cpe>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+      Spring security
+      See https://github.com/jeremylong/DependencyCheck/issues/1827
+      https://pivotal.io/security/cve-2018-1258
+   ]]></notes>
+    <gav>org.springframework.security:spring-security-core:5.0.13.RELEASE</gav>
+    <cpe>cpe:/a:pivotal_software:spring_security:5.0.13</cpe>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+      Spring security
+      See https://github.com/jeremylong/DependencyCheck/issues/1827
+      https://pivotal.io/security/cve-2018-1258
+   ]]></notes>
+    <gav>org.springframework.security:spring-security-web:5.0.13.RELEASE</gav>
+    <cpe>cpe:/a:pivotal_software:spring_security:5.0.13</cpe>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+      Spring security
+      See https://github.com/jeremylong/DependencyCheck/issues/1827
+      https://pivotal.io/security/cve-2018-1258
+   ]]></notes>
+    <gav>org.springframework.security:spring-security-config:5.0.13.RELEASE</gav>
+    <cpe>cpe:/a:pivotal_software:spring_security:5.0.13</cpe>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+      Application insights 2.3.1 dependent library Netty
+   ]]></notes>
+    <gav>io.netty:netty-tcnative-boringssl-static:2.0.17.Final</gav>
+    <cpe>cpe:/a:netty:netty:2.0.17</cpe>
+  </suppress>
+</suppressions>
