@@ -482,9 +482,6 @@
               <version>${owasp.version}</version>
             </dependency>
           </dependencies>
-          <configuration>
-            <failBuildOnCVSS>7</failBuildOnCVSS>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -548,9 +545,6 @@
       <plugin>
         <groupId>org.owasp</groupId>
         <artifactId>dependency-check-maven</artifactId>
-        <configuration>
-          <suppressionFiles>suppressions.xml</suppressionFiles>
-        </configuration>
       </plugin>
     </plugins>
   </build>
