@@ -35,7 +35,7 @@
 
     <tracesx.common.version>2.0.1</tracesx.common.version>
     <tracesx.common.security.version>2.0.0</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.40</tracesx.notification.schema.version>
+    <tracesx.notification.schema.version>1.0.42</tracesx.notification.schema.version>
 
     <!-- Spring Boot dependency version overrides -->
     <jackson.version>2.9.10</jackson.version>
