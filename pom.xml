@@ -49,7 +49,7 @@
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <equalsverifier.version>2.4.8</equalsverifier.version>
     <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
-    <jacoco.maven.plugin.version>0.8.0</jacoco.maven.plugin.version>
+    <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
     <json.patch.version>1.9</json.patch.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
@@ -57,7 +57,7 @@
     <jwks-rsa.version>0.3.0</jwks-rsa.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-    <mockito.all.version>1.10.19</mockito.all.version>
+    <mockito.version>2.28.2</mockito.version>
     <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
@@ -164,11 +164,6 @@
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-params</artifactId>
         <version>${junit.jupiter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-all</artifactId>
-        <version>${mockito.all.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.maven.surefire</groupId>
@@ -333,17 +328,17 @@
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
       <artifactId>mockito-inline</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.surefire</groupId>
       <artifactId>surefire-junit4</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -385,7 +380,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <argLine>
-              --illegal-access=permit
+              ${argLine} --illegal-access=permit
             </argLine>
           </configuration>
         </plugin>
@@ -420,9 +415,6 @@
           <configuration>
             <excludes>
               <exclude>**/traceswsns/**/*</exclude>
-              <exclude>**/uk/gov/defra/tracesx/notification/api/*</exclude>
-              <exclude>**/uk/gov/defra/tracesx/selenium/**/*</exclude>
-              <exclude>**/uk/gov/defra/tracesx/integration/**/*</exclude>
             </excludes>
           </configuration>
           <executions>
@@ -478,30 +470,6 @@
           <configuration>
             <useDefaultDelimiters>true</useDefaultDelimiters>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-failsafe-plugin</artifactId>
-          <configuration>
-            <argLine>
-              --illegal-access=permit
-            </argLine>
-            <includes>
-              <include>**/*IT.java</include>
-            </includes>
-            <additionalClasspathElements>
-              <additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
-            </additionalClasspathElements>
-            <parallel>none</parallel>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>integration-test</goal>
-                <goal>verify</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
