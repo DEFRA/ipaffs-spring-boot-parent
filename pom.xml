@@ -42,6 +42,7 @@
     <netty.version>4.1.42.Final</netty.version>
     <!-- End Spring Boot dependency version overrides -->
 
+    <adal4j.version>1.6.4</adal4j.version>
     <applicationinsights.version>2.5.0</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.1.7</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>2.5.0</azure.applicationinsights.springboot.starter.version>
@@ -139,6 +140,11 @@
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-logging-logback</artifactId>
         <version>${applicationinsights.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>adal4j</artifactId>
+        <version>${adal4j.version}</version>
       </dependency>
       <dependency>
         <groupId>com.github.fge</groupId>
@@ -263,6 +269,10 @@
     <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>applicationinsights-logging-logback</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>adal4j</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
