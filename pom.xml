@@ -60,7 +60,7 @@
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <mockito.version>2.28.2</mockito.version>
-    <mssql.jdbc.version>7.0.0.jre8</mssql.jdbc.version>
+    <mssql.jdbc.version>7.4.1.jre11</mssql.jdbc.version>
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
@@ -68,6 +68,7 @@
     <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
+    <client.runtime.version>1.6.15</client.runtime.version>
   </properties>
 
   <dependencyManagement>
@@ -146,6 +147,11 @@
         <groupId>com.microsoft.azure</groupId>
         <artifactId>adal4j</artifactId>
         <version>${adal4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.rest</groupId>
+        <artifactId>client-runtime</artifactId>
+        <version>${client.runtime.version}</version>
       </dependency>
       <dependency>
         <groupId>com.github.fge</groupId>
@@ -279,6 +285,10 @@
     <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>adal4j</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.rest</groupId>
+      <artifactId>client-runtime</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
