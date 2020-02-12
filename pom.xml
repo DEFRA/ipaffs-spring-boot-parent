@@ -46,6 +46,7 @@
     <applicationinsights.version>2.5.0</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.1.7</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>2.5.0</azure.applicationinsights.springboot.starter.version>
+    <azure.version>2.2.0</azure.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <equalsverifier.version>2.4.8</equalsverifier.version>
@@ -122,6 +123,13 @@
         <groupId>io.micrometer</groupId>
         <artifactId>micrometer-core</artifactId>
         <version>${io.micrometer.micrometer-core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-spring-boot-bom</artifactId>
+        <version>${azure.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.microsoft.azure</groupId>
