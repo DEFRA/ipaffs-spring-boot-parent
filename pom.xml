@@ -35,7 +35,7 @@
 
     <tracesx.common.version>2.0.10</tracesx.common.version>
     <tracesx.common.security.version>2.0.3</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.66</tracesx.notification.schema.version>
+    <tracesx.notification.schema.version>1.0.67</tracesx.notification.schema.version>
 
     <adal4j.version>1.6.4</adal4j.version>
     <applicationinsights.version>2.5.0</applicationinsights.version>
