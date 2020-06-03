@@ -33,7 +33,7 @@
 
     <java.version>11</java.version>
 
-    <tracesx.common.version>2.0.12</tracesx.common.version>
+    <tracesx.common.version>2.0.13</tracesx.common.version>
     <tracesx.common.security.version>2.0.3</tracesx.common.security.version>
     <tracesx.notification.schema.version>1.0.69</tracesx.notification.schema.version>
 
