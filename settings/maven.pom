@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <servers>
+    <server>
+      <username>eux-imp-sp</username>
+      <password>AP2YmHpXLQrUSUL8h1M3sbATYn6ACzA4R2AmNkgP5yhmsxTfYLbEhmjvzZ1Q</password>
+      <id>central</id>
+    </server>
+    <server>
+      <username>eux-imp-sp</username>
+      <password>AP2YmHpXLQrUSUL8h1M3sbATYn6ACzA4R2AmNkgP5yhmsxTfYLbEhmjvzZ1Q</password>
+      <id>snapshots</id>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>repocentral</name>
+          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>repocentral</name>
+          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>repocentral</name>
+          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>repocentral</name>
+          <url>https://artifactory.azure.defra.cloud/artifactory/repocentral</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>artifactory</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>artifactory</activeProfile>
+  </activeProfiles>
+</settings>
