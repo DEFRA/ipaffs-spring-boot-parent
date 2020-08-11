@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.5.RELEASE</version>
+    <version>2.3.2.RELEASE</version>
   </parent>
 
   <distributionManagement>
@@ -45,7 +45,7 @@
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <equalsverifier.version>2.4.8</equalsverifier.version>
     <guava.version>24.1.1-jre</guava.version>
-    <io.micrometer.micrometer-core.version>1.1.2</io.micrometer.micrometer-core.version>
+    <io.micrometer.micrometer-core.version>1.5.3</io.micrometer.micrometer-core.version>
     <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
     <json.patch.version>1.9</json.patch.version>
@@ -440,7 +440,7 @@
             <execution>
               <id>default-cli</id>
               <configuration>
-                <jvmArguments>-Dspring.config.additional-location=file:.</jvmArguments>
+                <jvmArguments>-Dspring.config.additional-location=file:./</jvmArguments>
                 <profiles>
                   <profile>default</profile>
                   <profile>local</profile>
