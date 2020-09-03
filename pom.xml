@@ -34,8 +34,8 @@
     <java.version>11</java.version>
 
     <tracesx.common.version>2.0.16</tracesx.common.version>
-    <tracesx.common.security.version>2.0.7</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.91</tracesx.notification.schema.version>
+    <tracesx.common.security.version>2.0.8</tracesx.common.security.version>
+    <tracesx.notification.schema.version>1.0.92</tracesx.notification.schema.version>
     <adal4j.version>1.6.4</adal4j.version>
     <applicationinsights.version>2.5.0</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.1.7</azure.springboot.metricsstarter.version>
