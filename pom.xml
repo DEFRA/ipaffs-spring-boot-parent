@@ -59,7 +59,7 @@
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.9.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
-    <owasp.version>5.2.2</owasp.version>
+    <owasp.version>6.0.1</owasp.version>
     <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
@@ -490,6 +490,9 @@
           <groupId>org.owasp</groupId>
           <artifactId>dependency-check-maven</artifactId>
           <version>${owasp.version}</version>
+          <configuration>
+            <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+          </configuration>
           <executions>
             <execution>
               <goals>
