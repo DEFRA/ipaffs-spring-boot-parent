@@ -139,6 +139,11 @@
       </dependency>
       <dependency>
         <groupId>com.microsoft.azure</groupId>
+        <artifactId>applicationinsights-core</artifactId>
+        <version>${applicationinsights.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-web</artifactId>
         <version>${applicationinsights.version}</version>
       </dependency>
