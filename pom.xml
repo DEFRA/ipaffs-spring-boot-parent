@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.4.2</version>
+    <version>2.3.2.RELEASE</version>
   </parent>
 
   <distributionManagement>
@@ -33,8 +33,8 @@
 
     <java.version>11</java.version>
 
-    <tracesx.common.version>2.0.19</tracesx.common.version>
-    <tracesx.common.security.version>2.0.9</tracesx.common.security.version>
+    <tracesx.common.version>2.0.18</tracesx.common.version>
+    <tracesx.common.security.version>2.0.8</tracesx.common.security.version>
     <tracesx.notification.schema.version>1.0.144</tracesx.notification.schema.version>
     <adal4j.version>1.6.4</adal4j.version>
     <applicationinsights.version>2.6.2</applicationinsights.version>
@@ -44,13 +44,14 @@
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <equalsverifier.version>2.4.8</equalsverifier.version>
-    <guava.version>30.1-jre</guava.version>
+    <guava.version>24.1.1-jre</guava.version>
     <io.micrometer.micrometer-core.version>1.5.3</io.micrometer.micrometer-core.version>
     <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
     <json.patch.version>1.9</json.patch.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
     <junit.jupiter.version>5.0.2</junit.jupiter.version>
+    <jwks-rsa.version>0.3.0</jwks-rsa.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <mockito.version>2.28.2</mockito.version>
@@ -58,7 +59,8 @@
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
-    <owasp.version>6.0.5</owasp.version>
+    <owasp.version>6.0.1</owasp.version>
+    <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
     <client.runtime.version>1.6.15</client.runtime.version>
@@ -97,6 +99,16 @@
         <groupId>uk.gov.defra.tracesx</groupId>
         <artifactId>notification-schema-java</artifactId>
         <version>${tracesx.notification.schema.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-jwt</artifactId>
+        <version>${spring.security.jwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.auth0</groupId>
+        <artifactId>jwks-rsa</artifactId>
+        <version>${jwks-rsa.version}</version>
       </dependency>
       <dependency>
         <groupId>commons-beanutils</groupId>
@@ -149,12 +161,6 @@
         <groupId>com.microsoft.rest</groupId>
         <artifactId>client-runtime</artifactId>
         <version>${client.runtime.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
       <dependency>
         <groupId>com.github.fge</groupId>
@@ -308,21 +314,11 @@
     <dependency>
       <groupId>com.github.fge</groupId>
       <artifactId>json-patch</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>com.google.guava</groupId>
-          <artifactId>guava</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
     </dependency>
     <!-- TODO: IMTS-4606 It would be nice to have a separate persistence parent -->
     <dependency>
