@@ -53,7 +53,7 @@
     <junit.jupiter.version>5.0.2</junit.jupiter.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-    <mockito.version>2.28.2</mockito.version>
+    <mockito.version>3.11.2</mockito.version>
     <mssql.jdbc.version>7.4.1.jre11</mssql.jdbc.version>
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
