@@ -24,7 +24,7 @@ pipeline {
     stage('Deploy Maven Artifact') {
 
       when {
-        environment name: 'BRANCH_NAME', value: 'hotfix/IMTA-123-test-old-hotfix'
+        environment name: 'BRANCH_NAME', value: 'hotfix/IMTA-123-test-old-hotfix-1'
       }
 
       steps {
