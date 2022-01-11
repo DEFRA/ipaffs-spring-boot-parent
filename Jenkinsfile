@@ -1,4 +1,4 @@
-@Library('pipeline-library') _
+@Library('pipeline-library@hotfix/IMTA-123-test-old-hotfix') _
 
 pipeline {
   agent {label 'swarm'}
@@ -24,7 +24,7 @@ pipeline {
     stage('Deploy Maven Artifact') {
 
       when {
-        environment name: 'BRANCH_NAME', value: 'master'
+        environment name: 'BRANCH_NAME', value: 'hotfix/IMTA-123-test-old-hotfix'
       }
 
       steps {
