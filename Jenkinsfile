@@ -27,11 +27,13 @@ pipeline {
          branch 'hotfix/**'
       }
       steps {
-        env.NEXT_VERSION = input message: 'Please enter the next snapshot version',
-                                   parameters: [string(defaultValue: '',
-                                                description: 'E.g 2.0.103-HOTFIX-2-SNAPSHOT where 2.0.103 is the hotfixed version and -2- is the hotfix version',
-                                                name: 'Next snapshot version')]
-        mvnDeploy("${BRANCH_NAME}", "pom.xml", env.NEXT_VERSION)
+        script {
+          env.NEXT_VERSION = input message: 'Please enter the next snapshot version',
+                                           parameters: [string(defaultValue: '',
+                                                        description: 'E.g 2.0.103-HOTFIX-2-SNAPSHOT where 2.0.103 is the hotfixed version and -2- is the hotfix version',
+                                                        name: 'Next snapshot version')]
+                mvnDeploy("${BRANCH_NAME}", "pom.xml", env.NEXT_VERSION)
+        }
       }
     }
   }
