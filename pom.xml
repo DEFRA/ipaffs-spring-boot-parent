@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.12.RELEASE</version>
+    <version>2.6.2</version>
   </parent>
 
   <distributionManagement>
@@ -33,19 +33,18 @@
 
     <java.version>11</java.version>
 
-    <tracesx.common.version>2.0.20</tracesx.common.version>
-    <tracesx.common.security.version>2.0.13</tracesx.common.security.version>
+    <tracesx.common.version>2.0.21</tracesx.common.version>
+    <tracesx.common.security.version>2.0.14</tracesx.common.security.version>
     <tracesx.notification.schema.version>1.0.207</tracesx.notification.schema.version>
-    <adal4j.version>1.6.4</adal4j.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
-    <azure.springboot.metricsstarter.version>2.1.7</azure.springboot.metricsstarter.version>
+    <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
     <azure.version>2.2.0</azure.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <equalsverifier.version>2.4.8</equalsverifier.version>
     <guava.version>30.1-jre</guava.version>
-    <io.micrometer.micrometer-core.version>1.5.3</io.micrometer.micrometer-core.version>
+    <io.micrometer.micrometer-core.version>1.8.2</io.micrometer.micrometer-core.version>
     <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
     <json.patch.version>1.9</json.patch.version>
@@ -54,7 +53,8 @@
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <mockito.version>3.11.2</mockito.version>
-    <mssql.jdbc.version>7.4.1.jre11</mssql.jdbc.version>
+    <mssql.jdbc.version>9.2.1.jre11</mssql.jdbc.version>
+    <azureidentity.version>1.4.3</azureidentity.version>
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
@@ -64,6 +64,7 @@
     <client.runtime.version>1.6.15</client.runtime.version>
     <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
     <maven-dependency-analyzer.version>1.11.1</maven-dependency-analyzer.version>
+    <log4j2.version>2.17.1</log4j2.version>
   </properties>
 
   <dependencyManagement>
@@ -141,9 +142,9 @@
         <version>${applicationinsights.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>adal4j</artifactId>
-        <version>${adal4j.version}</version>
+        <groupId>com.azure</groupId>
+        <artifactId>azure-identity</artifactId>
+        <version>${azureidentity.version}</version>
       </dependency>
       <dependency>
         <groupId>com.microsoft.rest</groupId>
@@ -286,8 +287,8 @@
       <artifactId>applicationinsights-logging-logback</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>adal4j</artifactId>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-identity</artifactId>
     </dependency>
     <dependency>
       <groupId>com.microsoft.rest</groupId>
