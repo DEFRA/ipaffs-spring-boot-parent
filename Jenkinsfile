@@ -1,4 +1,4 @@
-@Library('pipeline-library') _
+@Library('pipeline-library@feature/IMTA-9847-hotfix-process-for-libraries') _
 
 pipeline {
   agent {label 'swarm'}
@@ -9,6 +9,11 @@ pipeline {
     ansiColor('xterm')
     timestamps()
     disableConcurrentBuilds()
+  }
+  parameters {
+      booleanParam(name: 'PUSH_TO_ARTIFACTORY', defaultValue: false, description: 'Do you want to push hotfix to artifactory?')
+      string(name: 'AFFECTED_VERSION', defaultValue: null, description: 'Enter affected version to be hotfixed e.g 2.0.103')
+      string(name: 'HOTFIX_VERSION', defaultValue: '1', description: 'Enter hotfix version (1 if it’s the 1st time patching this release version)')
   }
 
   stages {
@@ -22,7 +27,6 @@ pipeline {
     }
 
     stage('Deploy Maven Artifact') {
-
       when {
         environment name: 'BRANCH_NAME', value: 'master'
       }
@@ -30,6 +34,19 @@ pipeline {
       steps {
         mvnDeploy("${BRANCH_NAME}", "pom.xml")
       }
+    }
+
+    stage('===HOTFIX=== Deploy Maven Artifact') {
+        when {
+            allOf{
+                branch 'hotfix/**'
+                expression { params.PUSH_TO_ARTIFACTORY == true }
+                expression { params.AFFECTED_VERSION != null }
+            }
+        }
+        steps {
+            mvnDeploy("${BRANCH_NAME}", "pom.xml", true)
+        }
     }
   }
 

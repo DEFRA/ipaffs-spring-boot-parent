@@ -38,7 +38,7 @@
     <tracesx.notification.schema.version>1.0.133</tracesx.notification.schema.version>
     <adal4j.version>1.6.4</adal4j.version>
     <applicationinsights.version>2.6.2</applicationinsights.version>
-    <azure.springboot.metricsstarter.version>2.1.7</azure.springboot.metricsstarter.version>
+    <azure.springboot.metricsstarter.version>2.1.8</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>2.6.2</azure.applicationinsights.springboot.starter.version>
     <azure.version>2.2.0</azure.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
