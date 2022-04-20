@@ -35,7 +35,7 @@
 
     <tracesx.common.version>2.0.21</tracesx.common.version>
     <tracesx.common.security.version>2.0.14</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.225</tracesx.notification.schema.version>
+    <tracesx.notification.schema.version>1.0.226</tracesx.notification.schema.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
