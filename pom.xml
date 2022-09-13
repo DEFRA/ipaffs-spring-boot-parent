@@ -49,7 +49,6 @@
     <jjwt.version>0.10.5</jjwt.version>
     <json.patch.version>1.9</json.patch.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
-    <junit.jupiter.version>5.0.2</junit.jupiter.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <mssql.jdbc.version>9.2.1.jre11</mssql.jdbc.version>
@@ -170,16 +169,6 @@
         <groupId>com.microsoft.sqlserver</groupId>
         <artifactId>mssql-jdbc</artifactId>
         <version>${mssql.jdbc.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>${junit.jupiter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-params</artifactId>
-        <version>${junit.jupiter.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.maven.surefire</groupId>
