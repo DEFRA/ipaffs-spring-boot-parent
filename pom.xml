@@ -34,7 +34,7 @@
     <java.version>11</java.version>
 
     <tracesx.common.version>2.0.24</tracesx.common.version>
-    <tracesx.common.security.version>2.0.14</tracesx.common.security.version>
+    <tracesx.common.security.version>2.0.17</tracesx.common.security.version>
     <tracesx.notification.schema.version>1.0.242</tracesx.notification.schema.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
@@ -56,7 +56,7 @@
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
-    <owasp.version>6.5.3</owasp.version>
+    <owasp.version>7.1.1</owasp.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
     <client.runtime.version>1.6.15</client.runtime.version>
