@@ -1,3 +1,8 @@
+import defra.pipeline.config.Config;
+import defra.pipeline.deploy.DeployQueries;
+
+def deployables = DeployQueries.getListOfDeployableComponents(Config.getPropertyValue("secretscanningDeploymentList", this), this)
+
 @Library('pipeline-library') _
 
 pipeline {
@@ -17,6 +22,19 @@ pipeline {
   }
 
   stages {
+
+    stage('Code Secret Scanning'){
+      when {
+        expression {deployables.contains(SERVICE_NAME)}
+      }
+      steps {
+        build job: 'Code-secret-scanning',
+            parameters: [
+                string(name: 'repository', value: "https://giteux.azure.defra.cloud/imports/$SERVICE_NAME" +".git"),
+                string(name: 'branch', value: "master")
+            ]
+      }
+    }
 
     stage('Package') {
       steps {
