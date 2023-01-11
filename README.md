@@ -15,7 +15,7 @@ It is used as a pre-push hook and will scan any local commits being pushed
 2. Set DEFRA_WORKSPACE env var (`export DEFRA_WORKSPACE=/path/to/workspace`)
 3. Potentially there's an older version of Trufflehog located at: `/usr/local/bin/trufflehog`. If so, remove this.
 4. Create a symlink: `ln -s ~/go/bin/truffleHog /usr/local/bin/trufflehog`
-5. From this project root directory copy the pre-push hook: `cp hooks/pre-push .git/hooks/pre-push`
+5. Run `mvn install` to configure hooks
 
 ### Steps to integrate
 Include the following in the pom.xml of your spring boot service
