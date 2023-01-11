@@ -57,13 +57,14 @@
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
-    <owasp.version>7.1.1</owasp.version>
+    <owasp.version>7.4.4</owasp.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
     <client.runtime.version>1.6.15</client.runtime.version>
     <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
     <maven-dependency-analyzer.version>1.11.1</maven-dependency-analyzer.version>
     <log4j2.version>2.17.1</log4j2.version>
+    <git-build-hook-maven-plugin.version>3.3.0</git-build-hook-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -540,6 +541,23 @@
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <groupId>com.rudikershaw.gitbuildhook</groupId>
+          <artifactId>git-build-hook-maven-plugin</artifactId>
+          <version>${git-build-hook-maven-plugin.version}</version>
+          <configuration>
+            <gitConfig>
+              <core.hooksPath>hooks</core.hooksPath>
+            </gitConfig>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>configure</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -555,6 +573,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.rudikershaw.gitbuildhook</groupId>
+        <artifactId>git-build-hook-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
