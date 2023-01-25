@@ -53,7 +53,7 @@
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <mssql.jdbc.version>9.2.1.jre11</mssql.jdbc.version>
-    <azureidentity.version>1.7.3</azureidentity.version>
+    <azureidentity.version>1.4.3</azureidentity.version>
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
@@ -191,11 +191,6 @@
         <groupId>com.doctusoft</groupId>
         <artifactId>json-schema-java7</artifactId>
         <version>${json-schema-java7.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.dataformat</groupId>
-        <artifactId>jackson-dataformat-xml</artifactId>
-        <version>2.14.1</version>
       </dependency>
       <dependency>
         <groupId>com.neovisionaries</groupId>
