@@ -48,7 +48,7 @@
     <io.micrometer.micrometer-core.version>1.8.2</io.micrometer.micrometer-core.version>
     <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
-    <json.patch.version>1.9</json.patch.version>
+    <json.patch.version>3.1.1</json.patch.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
     <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
