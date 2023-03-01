@@ -9,6 +9,7 @@ pipeline {
   agent {label 'swarm'}
   environment {
     SERVICE_NAME = "spring-boot-parent"
+    JAVA_HOME = "/usr/lib/jvm/temurin-11-jdk-amd64"
   }
   options {
     ansiColor('xterm')
