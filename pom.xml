@@ -37,34 +37,37 @@
     <tracesx.common.security.version>2.0.18</tracesx.common.security.version>
     <tracesx.notification.schema.version>1.0.263</tracesx.notification.schema.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
-    <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
+    <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.version>2.2.0</azure.version>
-    <commons.beanutils.version>1.9.4</commons.beanutils.version>
+    <azureidentity.version>1.7.3</azureidentity.version>
+    <checkstyle.version>10.8.1</checkstyle.version>
+    <client.runtime.version>1.6.15</client.runtime.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
+    <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <equalsverifier.version>2.4.8</equalsverifier.version>
+    <git-build-hook-maven-plugin.version>3.3.0</git-build-hook-maven-plugin.version>
     <guava.version>30.1-jre</guava.version>
-    <snakeyaml.version>1.33</snakeyaml.version>
     <io.micrometer.micrometer-core.version>1.8.2</io.micrometer.micrometer-core.version>
     <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
-    <json.patch.version>1.9</json.patch.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
-    <maven.checkstyle.version>3.0.0</maven.checkstyle.version>
+    <json.patch.version>1.9</json.patch.version>
+    <log4j2.version>2.17.1</log4j2.version>
+    <maven-dependency-analyzer.version>1.11.1</maven-dependency-analyzer.version>
+    <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+    <maven-remote-resources-plugin.version>3.0.0</maven-remote-resources-plugin.version>
+    <maven.checkstyle.version>3.2.1</maven.checkstyle.version>
     <mssql.jdbc.version>9.2.1.jre11</mssql.jdbc.version>
-    <azureidentity.version>1.7.3</azureidentity.version>
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
     <owasp.version>7.4.4</owasp.version>
+    <shared-resources.version>1.0.0</shared-resources.version>
+    <snakeyaml.version>1.33</snakeyaml.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
-    <client.runtime.version>1.6.15</client.runtime.version>
-    <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
-    <maven-dependency-analyzer.version>1.11.1</maven-dependency-analyzer.version>
-    <log4j2.version>2.17.1</log4j2.version>
-    <git-build-hook-maven-plugin.version>3.3.0</git-build-hook-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -410,6 +413,11 @@
       <artifactId>hibernate-java8</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>uk.gov.defra.tracesx</groupId>
+      <artifactId>shared-resources</artifactId>
+      <version>${shared-resources.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -538,14 +546,19 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>${maven.checkstyle.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>${checkstyle.version}</version>
+            </dependency>
+          </dependencies>
           <configuration>
-            <configLocation>google_checks.xml</configLocation>
+            <configLocation>${project.build.directory}/maven-shared-archive-resources/google_checks_ipaffs.xml</configLocation>
             <logViolationsToConsole>true</logViolationsToConsole>
             <outputFile>${project.build.directory}/checkstyle-result.xml</outputFile>
             <violationSeverity>warning</violationSeverity>
             <failsOnError>true</failsOnError>
-            <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
-            <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
           </configuration>
           <executions>
             <execution>
@@ -573,6 +586,23 @@
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-remote-resources-plugin</artifactId>
+          <version>${maven-remote-resources-plugin.version}</version>
+          <configuration>
+            <resourceBundles>
+              <resourceBundle>uk.gov.defra.tracesx:shared-resources:${shared-resources.version}</resourceBundle>
+            </resourceBundles>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>process</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -592,6 +622,10 @@
       <plugin>
         <groupId>com.rudikershaw.gitbuildhook</groupId>
         <artifactId>git-build-hook-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-remote-resources-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
