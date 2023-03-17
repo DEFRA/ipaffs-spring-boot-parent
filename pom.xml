@@ -413,11 +413,6 @@
       <artifactId>hibernate-java8</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>uk.gov.defra.tracesx</groupId>
-      <artifactId>shared-resources</artifactId>
-      <version>${shared-resources.version}</version>
-    </dependency>
   </dependencies>
 
   <build>
