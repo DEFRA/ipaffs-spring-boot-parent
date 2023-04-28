@@ -6,7 +6,7 @@
 //def jenkinsCredentialsRepository = Config.getPropertyValue("jenkinsCredentialsRepository", this)
 
 pipeline {
-    agent {label 'build_nodes'}
+    agent {label 'autoNodeLive'}
     //triggers {
        //cron('TZ=Europe/London\n0 21 * * 4')
     //}

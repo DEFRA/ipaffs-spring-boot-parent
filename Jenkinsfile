@@ -6,9 +6,10 @@ def deployables = DeployQueries.getListOfDeployableComponents(Config.getProperty
 @Library('pipeline-library') _
 
 pipeline {
-  agent {label 'swarm'}
+  agent {label 'autoNodeLive'}
   environment {
     SERVICE_NAME = "spring-boot-parent"
+    JAVA_HOME = "/usr/lib/jvm/temurin-11-jdk-amd64"
   }
   options {
     ansiColor('xterm')
