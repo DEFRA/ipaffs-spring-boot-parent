@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>2.0.252</version>
+  <version>2.0.255</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.7</version>
+    <version>2.7.12</version>
   </parent>
 
   <distributionManagement>
@@ -25,7 +25,7 @@
 
   <scm>
     <connection>scm:git:https://giteux.azure.defra.cloud/imports/spring-boot-parent.git</connection>
-    <tag>2.0.252-574</tag>
+    <tag>2.0.255-580</tag>
   </scm>
 
   <properties>
@@ -35,12 +35,12 @@
 
     <tracesx.common.version>2.0.26</tracesx.common.version>
     <tracesx.common.security.version>2.0.18</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.272</tracesx.notification.schema.version>
+    <tracesx.notification.schema.version>1.0.273</tracesx.notification.schema.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
     <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.version>2.2.0</azure.version>
-    <azureidentity.version>1.7.3</azureidentity.version>
+    <azureidentity.version>1.8.3</azureidentity.version>
     <checkstyle.version>10.8.1</checkstyle.version>
     <client.runtime.version>1.6.15</client.runtime.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
@@ -53,7 +53,6 @@
     <jjwt.version>0.10.5</jjwt.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
     <json.patch.version>1.9</json.patch.version>
-    <log4j2.version>2.17.1</log4j2.version>
     <maven-dependency-analyzer.version>1.11.1</maven-dependency-analyzer.version>
     <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
@@ -63,7 +62,7 @@
     <neovisionaries.version>1.22</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
-    <owasp.version>7.4.4</owasp.version>
+    <owasp.version>8.2.1</owasp.version>
     <shared-resources.version>1.0.0</shared-resources.version>
     <snakeyaml.version>1.33</snakeyaml.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
