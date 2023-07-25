@@ -36,11 +36,39 @@ pipeline {
             }
         }
 
+        stage('===Snapshot=== Update Version') {
+            when {
+                anyOf {
+                    branch 'feature/**'
+                    branch 'bugfix/**'
+                }
+            }
+            steps {
+                getFile 'settings/maven.xml'
+                script {
+                    pomVersion = sh script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true
+                }
+                mvnVersionUpdate("${pomVersion}", "${BRANCH_NAME}", "pom.xml")
+            }
+        }
+
         stage('Package') {
             steps {
                 getFile 'settings/maven.xml'
                 sh 'mvn -f pom.xml resources:resources --settings ./settings/maven.xml'
                 sh 'mvn -f pom.xml package --settings ./settings/maven.xml'
+            }
+        }
+
+        stage('===Snapshot=== Deploy Maven Artifact') {
+            when {
+                anyOf {
+                    branch 'feature/**'
+                    branch 'bugfix/**'
+                }
+            }
+            steps {
+                mvnSnapshotDeploy("pom.xml")
             }
         }
 
