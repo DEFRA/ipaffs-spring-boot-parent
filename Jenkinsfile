@@ -9,12 +9,13 @@ pipeline {
     agent { label 'autoNodeLive' }
     environment {
         SERVICE_NAME = "spring-boot-parent"
-        JAVA_HOME = "/usr/lib/jvm/temurin-11-jdk-amd64"
+        JAVA_HOME = "/usr/lib/jvm/temurin-17-jdk-amd64"
     }
     options {
         ansiColor('xterm')
         timestamps()
         disableConcurrentBuilds()
+        gitLabConnection('Gitlab')
     }
     parameters {
         booleanParam(name: 'PUSH_TO_ARTIFACTORY', defaultValue: false, description: 'Do you want to push hotfix to artifactory?')
@@ -74,7 +75,7 @@ pipeline {
 
         stage('Deploy Maven Artifact') {
             when {
-                environment name: 'BRANCH_NAME', value: 'master'
+                branch 'master**'
             }
 
             steps {
@@ -101,11 +102,13 @@ pipeline {
             step([$class: 'WsCleanup'])
         }
         failure {
-            notifyTeams('red', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'FAILED', 'mergeNotifications')
+            notifyTeams('red', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'FAILED', 'mergeNotifications',
+             	BRANCH_NAME == 'master' || BRANCH_NAME == 'master-java17-v3' ? BRANCH_NAME : null)
             updateGitlabCommitStatus name: 'build', state: 'failed'
         }
         success {
-            notifyTeams('green', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'SUCCESS', 'mergeNotifications')
+            notifyTeams('green', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'SUCCESS', 'mergeNotifications',
+            	BRANCH_NAME == 'master' || BRANCH_NAME == 'master-java17-v3' ? BRANCH_NAME : null)
             updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
