@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>2.0.273-SNAPSHOT</version>
+  <version>2.0.273-JAVA-UPGRADE</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -36,7 +36,7 @@
   <properties>
     <project.scm.id>gitlab</project.scm.id>
 
-    <java.version>11</java.version>
+    <java.version>17</java.version>
 
     <tracesx.common.version>2.0.26</tracesx.common.version>
     <tracesx.common.security.version>2.0.22</tracesx.common.security.version>
@@ -50,11 +50,11 @@
     <client.runtime.version>1.6.15</client.runtime.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
-    <equalsverifier.version>2.4.8</equalsverifier.version>
+    <equalsverifier.version>3.15.1</equalsverifier.version>
     <git-build-hook-maven-plugin.version>3.3.0</git-build-hook-maven-plugin.version>
     <guava.version>32.1.2-jre</guava.version>
     <io.micrometer.micrometer-core.version>1.8.2</io.micrometer.micrometer-core.version>
-    <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
+    <jacoco.maven.plugin.version>0.8.7</jacoco.maven.plugin.version>
     <jjwt.version>0.10.5</jjwt.version>
     <json-schema-java7.version>1.4.1</json-schema-java7.version>
     <json.patch.version>1.9</json.patch.version>
