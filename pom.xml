@@ -37,6 +37,8 @@
     <project.scm.id>gitlab</project.scm.id>
 
     <java.version>17</java.version>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
 
     <tracesx.common.version>2.0.26</tracesx.common.version>
     <tracesx.common.security.version>2.0.22</tracesx.common.security.version>
