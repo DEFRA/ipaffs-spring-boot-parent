@@ -76,6 +76,7 @@
     <snakeyaml.version>2.1</snakeyaml.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
+    <woodstox-core.version>6.5.1</woodstox-core.version>
   </properties>
 
   <dependencyManagement>
@@ -210,7 +211,7 @@
       <dependency>
         <groupId>com.fasterxml.woodstox</groupId>
         <artifactId>woodstox-core</artifactId>
-        <version>6.4.0</version>
+        <version>${woodstox-core.version}</version>
       </dependency>
       <dependency>
         <groupId>com.neovisionaries</groupId>
