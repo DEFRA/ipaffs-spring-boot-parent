@@ -3,7 +3,7 @@ import defra.pipeline.deploy.DeployQueries
 
 def deployables = DeployQueries.getListOfDeployableComponents(Config.getPropertyValue("secretscanningDeploymentList", this), this)
 
-@Library('pipeline-library') _
+@Library('pipeline-library@feature/IMTA-0000-upgrade-to-java-17') _
 
 pipeline {
     agent { label 'autoNodeLive' }
