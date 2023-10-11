@@ -67,7 +67,7 @@
     <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
     <maven-remote-resources-plugin.version>3.1.0</maven-remote-resources-plugin.version>
     <maven.versions.plugin.version>2.16.0</maven.versions.plugin.version>
-    <mssql.jdbc.version>9.2.1.jre11</mssql.jdbc.version>
+    <mssql.jdbc.version>11.2.0.jre17</mssql.jdbc.version>
     <neovisionaries.version>1.29</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.3</org.owasp.encoder.version>
