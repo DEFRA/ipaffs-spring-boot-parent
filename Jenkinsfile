@@ -75,7 +75,7 @@ pipeline {
 
         stage('Deploy Maven Artifact') {
             when {
-                branch 'master**'
+                branch 'master'
             }
 
             steps {
@@ -102,13 +102,11 @@ pipeline {
             step([$class: 'WsCleanup'])
         }
         failure {
-            notifyTeams('red', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'FAILED', 'mergeNotifications',
-             	BRANCH_NAME == 'master' || BRANCH_NAME == 'master-java17-v3' ? BRANCH_NAME : null)
+            notifyTeams('red', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'FAILED', 'mergeNotifications')
             updateGitlabCommitStatus name: 'build', state: 'failed'
         }
         success {
-            notifyTeams('green', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'SUCCESS', 'mergeNotifications',
-            	BRANCH_NAME == 'master' || BRANCH_NAME == 'master-java17-v3' ? BRANCH_NAME : null)
+            notifyTeams('green', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'SUCCESS', 'mergeNotifications')
             updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
