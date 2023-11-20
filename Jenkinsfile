@@ -9,12 +9,13 @@ pipeline {
     agent { label 'autoNodeLive' }
     environment {
         SERVICE_NAME = "spring-boot-parent"
-        JAVA_HOME = "/usr/lib/jvm/temurin-11-jdk-amd64"
+        JAVA_HOME = "/usr/lib/jvm/temurin-17-jdk-amd64"
     }
     options {
         ansiColor('xterm')
         timestamps()
         disableConcurrentBuilds()
+        gitLabConnection('Gitlab')
     }
     parameters {
         booleanParam(name: 'PUSH_TO_ARTIFACTORY', defaultValue: false, description: 'Do you want to push hotfix to artifactory?')
@@ -74,7 +75,7 @@ pipeline {
 
         stage('Deploy Maven Artifact') {
             when {
-                environment name: 'BRANCH_NAME', value: 'master'
+                branch 'master'
             }
 
             steps {
