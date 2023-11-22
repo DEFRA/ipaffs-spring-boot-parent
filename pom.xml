@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>2.0.278</version>
+  <version>3.0.6</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -30,52 +30,53 @@
 
   <scm>
     <connection>scm:git:https://giteux.REMOVED/imports/spring-boot-parent.git</connection>
-    <tag>2.0.278-627</tag>
+    <tag>3.0.6-19</tag>
   </scm>
 
   <properties>
     <project.scm.id>gitlab</project.scm.id>
 
-    <java.version>11</java.version>
+    <java.version>17</java.version>
 
     <tracesx.common.version>2.0.26</tracesx.common.version>
     <tracesx.common.security.version>2.0.22</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.296</tracesx.notification.schema.version>
+    <tracesx.notification.schema.version>1.0.301</tracesx.notification.schema.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
     <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.version>2.2.0</azure.version>
     <azureidentity.version>1.8.3</azureidentity.version>
-    <checkstyle.version>10.8.1</checkstyle.version>
-    <client.runtime.version>1.6.15</client.runtime.version>
+    <checkstyle.version>10.12.2</checkstyle.version>
+    <client.runtime.version>1.7.14</client.runtime.version>
     <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
-    <equalsverifier.version>2.4.8</equalsverifier.version>
-    <git-build-hook-maven-plugin.version>3.3.0</git-build-hook-maven-plugin.version>
+    <equalsverifier.version>3.15.1</equalsverifier.version>
+    <git-build-hook-maven-plugin.version>3.4.1</git-build-hook-maven-plugin.version>
     <guava.version>32.1.2-jre</guava.version>
-    <io.micrometer.micrometer-core.version>1.8.2</io.micrometer.micrometer-core.version>
-    <jacoco.maven.plugin.version>0.8.2</jacoco.maven.plugin.version>
-    <jjwt.version>0.10.5</jjwt.version>
-    <json-schema-java7.version>1.4.1</json-schema-java7.version>
+    <io.micrometer.micrometer-core.version>1.11.3</io.micrometer.micrometer-core.version>
+    <jacoco.maven.plugin.version>0.8.10</jacoco.maven.plugin.version>
+    <jjwt.version>0.11.5</jjwt.version>
+    <json-schema-java7.version>1.4.1.1</json-schema-java7.version>
     <json.patch.version>1.9</json.patch.version>
-    <maven.checkstyle.version>3.2.1</maven.checkstyle.version>
-    <maven-dependency-analyzer.version>1.11.1</maven-dependency-analyzer.version>
-    <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
+    <maven.checkstyle.version>3.3.0</maven.checkstyle.version>
+    <maven-dependency-analyzer.version>1.13.2</maven-dependency-analyzer.version>
+    <maven-dependency-plugin.version>3.6.0</maven-dependency-plugin.version>
     <maven.deploy.plugin.version>3.1.1</maven.deploy.plugin.version>
     <maven.help.plugin.version>3.4.0</maven.help.plugin.version>
     <maven.jar.plugin.version>3.3.0</maven.jar.plugin.version>
-    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-    <maven-remote-resources-plugin.version>3.0.0</maven-remote-resources-plugin.version>
+    <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
+    <maven-remote-resources-plugin.version>3.1.0</maven-remote-resources-plugin.version>
     <maven.versions.plugin.version>2.16.0</maven.versions.plugin.version>
-    <mssql.jdbc.version>9.2.1.jre11</mssql.jdbc.version>
-    <neovisionaries.version>1.22</neovisionaries.version>
+    <mssql.jdbc.version>11.2.0.jre17</mssql.jdbc.version>
+    <neovisionaries.version>1.29</neovisionaries.version>
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
-    <org.owasp.encoder.version>1.2.2</org.owasp.encoder.version>
-    <owasp.version>8.2.1</owasp.version>
+    <org.owasp.encoder.version>1.2.3</org.owasp.encoder.version>
+    <owasp.version>8.4.0</owasp.version>
     <shared-resources.version>1.0.0</shared-resources.version>
-    <snakeyaml.version>1.33</snakeyaml.version>
+    <snakeyaml.version>2.1</snakeyaml.version>
     <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <testng.version>6.14.3</testng.version>
+    <woodstox-core.version>6.5.1</woodstox-core.version>
   </properties>
 
   <dependencyManagement>
@@ -210,7 +211,7 @@
       <dependency>
         <groupId>com.fasterxml.woodstox</groupId>
         <artifactId>woodstox-core</artifactId>
-        <version>6.4.0</version>
+        <version>${woodstox-core.version}</version>
       </dependency>
       <dependency>
         <groupId>com.neovisionaries</groupId>
@@ -415,6 +416,7 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>${maven-dependency-plugin.version}</version>
           <dependencies>
