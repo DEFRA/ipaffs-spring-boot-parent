@@ -2,3 +2,4 @@
 target/
 settings.xml
 *.iml
+.DS_Store
