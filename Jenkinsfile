@@ -3,7 +3,7 @@ import defra.pipeline.deploy.DeployQueries
 
 def deployables = DeployQueries.getListOfDeployableComponents(Config.getPropertyValue("secretscanningDeploymentList", this), this)
 
-@Library('pipeline-library') _
+@Library('pipeline-library@feature/imta-000-use-defra-artificatory') _
 
 pipeline {
     agent { label 'autoNodeLive' }
