@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>3.0.18-SNAPSHOT</version>
+  <version>4.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.12</version>
+    <version>3.2.1</version>
   </parent>
 
   <distributionManagement>
@@ -38,11 +38,10 @@
 
     <java.version>17</java.version>
 
-    <tracesx.common.version>3.0.0</tracesx.common.version>
-    <tracesx.common.security.version>3.0.0</tracesx.common.security.version>
+    <tracesx.common.version>4.0.0.16084-SNAPSHOT</tracesx.common.version>
+    <tracesx.common.security.version>4.0.0.16084-SNAPSHOT</tracesx.common.security.version>
     <tracesx.notification.schema.version>2.0.9</tracesx.notification.schema.version>
-    <applicationinsights.version>2.6.3</applicationinsights.version>
-    <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
+    <applicationinsights.version>3.4.3</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.version>2.2.0</azure.version>
     <azureidentity.version>1.8.3</azureidentity.version>
@@ -53,6 +52,7 @@
     <equalsverifier.version>3.15.1</equalsverifier.version>
     <git-build-hook-maven-plugin.version>3.4.1</git-build-hook-maven-plugin.version>
     <guava.version>32.1.2-jre</guava.version>
+    <hibernate.version>6.4.1.Final</hibernate.version>
     <io.micrometer.micrometer-core.version>1.11.3</io.micrometer.micrometer-core.version>
     <jacoco.maven.plugin.version>0.8.10</jacoco.maven.plugin.version>
     <jjwt.version>0.11.5</jjwt.version>
@@ -140,22 +140,12 @@
       </dependency>
       <dependency>
         <groupId>com.microsoft.azure</groupId>
-        <artifactId>applicationinsights-spring-boot-starter</artifactId>
-        <version>${azure.applicationinsights.springboot.starter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-core</artifactId>
         <version>${applicationinsights.version}</version>
       </dependency>
       <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-web</artifactId>
-        <version>${applicationinsights.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>applicationinsights-logging-logback</artifactId>
         <version>${applicationinsights.version}</version>
       </dependency>
       <dependency>
@@ -202,6 +192,11 @@
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
         <version>${h2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.orm</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${hibernate.version}</version>
       </dependency>
       <dependency>
         <groupId>com.doctusoft</groupId>
@@ -295,15 +290,7 @@
     </dependency>
     <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>applicationinsights-spring-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.microsoft.azure</groupId>
       <artifactId>applicationinsights-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>applicationinsights-logging-logback</artifactId>
     </dependency>
     <dependency>
       <groupId>com.azure</groupId>
@@ -318,8 +305,8 @@
       <artifactId>commons-lang3</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
+      <groupId>org.apache.httpcomponents.client5</groupId>
+      <artifactId>httpclient5</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
@@ -383,6 +370,7 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-inline</artifactId>
+      <version>5.2.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -401,13 +389,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-entitymanager</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-java8</artifactId>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-core</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
