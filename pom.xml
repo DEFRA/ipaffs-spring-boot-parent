@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>3.0.7</version>
+  <version>3.0.17</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -30,7 +30,7 @@
 
   <scm>
     <connection>scm:git:https://giteux.REMOVED/imports/spring-boot-parent.git</connection>
-    <tag>3.0.7-22</tag>
+    <tag>3.0.17-661</tag>
   </scm>
 
   <properties>
@@ -38,9 +38,9 @@
 
     <java.version>17</java.version>
 
-    <tracesx.common.version>2.0.26</tracesx.common.version>
-    <tracesx.common.security.version>2.0.22</tracesx.common.security.version>
-    <tracesx.notification.schema.version>1.0.302</tracesx.notification.schema.version>
+    <tracesx.common.version>3.0.0</tracesx.common.version>
+    <tracesx.common.security.version>3.0.0</tracesx.common.security.version>
+    <tracesx.notification.schema.version>2.0.9</tracesx.notification.schema.version>
     <applicationinsights.version>2.6.3</applicationinsights.version>
     <azure.applicationinsights.springboot.starter.version>2.6.3</azure.applicationinsights.springboot.starter.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
