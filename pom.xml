@@ -43,7 +43,7 @@
     <tracesx.notification.schema.version>4.0.3</tracesx.notification.schema.version>
     <applicationinsights.version>3.4.13</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
-    <azure.version>2.2.0</azure.version>
+    <azure.version>2.3.3</azure.version>
     <azureidentity.version>1.8.3</azureidentity.version>
     <checkstyle.version>10.12.2</checkstyle.version>
     <client.runtime.version>1.7.14</client.runtime.version>
