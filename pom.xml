@@ -73,7 +73,6 @@
     <owasp.version>8.4.0</owasp.version>
     <shared-resources.version>1.0.0</shared-resources.version>
     <snakeyaml.version>2.1</snakeyaml.version>
-    <surefire.junit4.version>2.22.0</surefire.junit4.version>
     <woodstox-core.version>6.5.1</woodstox-core.version>
   </properties>
 
@@ -165,11 +164,6 @@
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven.surefire</groupId>
-        <artifactId>surefire-junit4</artifactId>
-        <version>${surefire.junit4.version}</version>
       </dependency>
       <dependency>
         <groupId>nl.jqno.equalsverifier</groupId>
@@ -352,11 +346,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.maven.surefire</groupId>
-      <artifactId>surefire-junit4</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>nl.jqno.equalsverifier</groupId>
       <artifactId>equalsverifier</artifactId>
       <scope>test</scope>
@@ -418,11 +407,6 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <configuration>
-            <argLine>
-              ${argLine} --illegal-access=permit
-            </argLine>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
