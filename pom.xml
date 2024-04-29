@@ -71,7 +71,7 @@
     <org.everit.json.schema.version>1.12.1</org.everit.json.schema.version>
     <org.owasp.encoder.version>1.2.3</org.owasp.encoder.version>
     <owasp.version>8.4.0</owasp.version>
-    <shared-resources.version>1.0.0</shared-resources.version>
+    <shared-resources.version>1.0.1</shared-resources.version>
     <snakeyaml.version>2.1</snakeyaml.version>
     <woodstox-core.version>6.5.1</woodstox-core.version>
   </properties>
@@ -513,6 +513,7 @@
           </dependencies>
           <configuration>
             <configLocation>${project.build.directory}/maven-shared-archive-resources/google_checks_ipaffs.xml</configLocation>
+            <suppressionsLocation>${project.build.directory}/maven-shared-archive-resources/checkstyle-suppressions.xml</suppressionsLocation>
             <logViolationsToConsole>true</logViolationsToConsole>
             <outputFile>${project.build.directory}/checkstyle-result.xml</outputFile>
             <violationSeverity>warning</violationSeverity>
