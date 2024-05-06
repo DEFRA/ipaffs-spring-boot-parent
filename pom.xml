@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>4.0.2</version>
+  <version>4.0.17</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -30,7 +30,7 @@
 
   <scm>
     <connection>scm:git:https://giteux.REMOVED/imports/spring-boot-parent.git</connection>
-    <tag>4.0.2-7</tag>
+    <tag>4.0.17-40</tag>
   </scm>
 
   <properties>
@@ -40,14 +40,13 @@
 
     <tracesx.common.version>4.0.1</tracesx.common.version>
     <tracesx.common.security.version>4.0.2</tracesx.common.security.version>
-    <tracesx.notification.schema.version>4.0.2</tracesx.notification.schema.version>
+    <tracesx.notification.schema.version>4.0.14</tracesx.notification.schema.version>
     <applicationinsights.version>3.4.13</applicationinsights.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
-    <azure.version>2.2.0</azure.version>
-    <azureidentity.version>1.8.3</azureidentity.version>
+    <azure.version>2.3.3</azure.version>
+    <azureidentity.version>1.11.2</azureidentity.version>
     <checkstyle.version>10.12.2</checkstyle.version>
     <client.runtime.version>1.7.14</client.runtime.version>
-    <com.mashape.unirest.version>1.4.9</com.mashape.unirest.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <equalsverifier.version>3.15.1</equalsverifier.version>
     <git-build-hook-maven-plugin.version>3.4.1</git-build-hook-maven-plugin.version>
@@ -74,8 +73,6 @@
     <owasp.version>8.4.0</owasp.version>
     <shared-resources.version>1.0.0</shared-resources.version>
     <snakeyaml.version>2.1</snakeyaml.version>
-    <surefire.junit4.version>2.22.0</surefire.junit4.version>
-    <testng.version>6.14.3</testng.version>
     <woodstox-core.version>6.5.1</woodstox-core.version>
   </properties>
 
@@ -169,11 +166,6 @@
         <version>${guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.apache.maven.surefire</groupId>
-        <artifactId>surefire-junit4</artifactId>
-        <version>${surefire.junit4.version}</version>
-      </dependency>
-      <dependency>
         <groupId>nl.jqno.equalsverifier</groupId>
         <artifactId>equalsverifier</artifactId>
         <version>${equalsverifier.version}</version>
@@ -204,11 +196,6 @@
         <version>${neovisionaries.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.mashape.unirest</groupId>
-        <artifactId>unirest-java</artifactId>
-        <version>${com.mashape.unirest.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.owasp.encoder</groupId>
         <artifactId>encoder</artifactId>
         <version>${org.owasp.encoder.version}</version>
@@ -227,11 +214,6 @@
         <groupId>io.jsonwebtoken</groupId>
         <artifactId>jjwt-jackson</artifactId>
         <version>${jjwt.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>${testng.version}</version>
       </dependency>
       <dependency>
         <groupId>org.yaml</groupId>
@@ -364,11 +346,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.maven.surefire</groupId>
-      <artifactId>surefire-junit4</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>nl.jqno.equalsverifier</groupId>
       <artifactId>equalsverifier</artifactId>
       <scope>test</scope>
@@ -430,11 +407,6 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <configuration>
-            <argLine>
-              ${argLine} --illegal-access=permit
-            </argLine>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
