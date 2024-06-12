@@ -56,8 +56,8 @@ pipeline {
         stage('Package') {
             steps {
                 getFile 'settings/maven.xml'
-                sh 'mvn -f pom.xml resources:resources --settings ./settings/maven.xml'
-                sh 'mvn -f pom.xml package --settings ./settings/maven.xml'
+                sh 'mvn -f pom.xml -ntp resources:resources --settings ./settings/maven.xml'
+                sh 'mvn -f pom.xml -ntp package --settings ./settings/maven.xml'
             }
         }
 
@@ -75,7 +75,7 @@ pipeline {
 
         stage('Deploy Maven Artifact') {
             when {
-                branch 'master'
+                branch 'master*'
             }
 
             steps {
