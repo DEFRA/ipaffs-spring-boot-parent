@@ -75,7 +75,7 @@ pipeline {
 
         stage('Deploy Maven Artifact') {
             when {
-                branch 'master*'
+                branch 'master'
             }
 
             steps {
