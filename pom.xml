@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>4.0.30-SNAPSHOT</version>
+  <version>4.0.30</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -30,7 +30,7 @@
 
   <scm>
     <connection>scm:git:https://giteux.azure.defra.cloud/imports/spring-boot-parent.git</connection>
-    <tag>HEAD</tag>
+    <tag>4.0.30-701</tag>
   </scm>
 
   <properties>
