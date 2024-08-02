@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>4.0.26</version>
+  <version>4.0.29</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -30,7 +30,7 @@
 
   <scm>
     <connection>scm:git:https://giteux.REMOVED/imports/spring-boot-parent.git</connection>
-    <tag>4.0.26-693</tag>
+    <tag>4.0.29-699</tag>
   </scm>
 
   <properties>
@@ -38,10 +38,10 @@
 
     <java.version>17</java.version>
 
-    <tracesx.common.version>4.0.2</tracesx.common.version>
-    <tracesx.common.security.version>4.0.4</tracesx.common.security.version>
-    <tracesx.notification.schema.version>4.0.21</tracesx.notification.schema.version>
-    <applicationinsights.version>3.4.13</applicationinsights.version>
+    <tracesx.common.version>4.0.3</tracesx.common.version>
+    <tracesx.common.security.version>4.0.5</tracesx.common.security.version>
+    <tracesx.notification.schema.version>4.0.24</tracesx.notification.schema.version>
+    <applicationinsights-core.version>3.4.19</applicationinsights-core.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
     <azure.version>2.3.3</azure.version>
     <azureidentity.version>1.11.2</azureidentity.version>
@@ -132,8 +132,8 @@
       </dependency>
       <dependency>
         <groupId>com.microsoft.azure</groupId>
-        <artifactId>applicationinsights-runtime-attach</artifactId>
-        <version>${applicationinsights.version}</version>
+        <artifactId>applicationinsights-core</artifactId>
+        <version>${applicationinsights-core.version}</version>
       </dependency>
       <dependency>
         <groupId>com.azure</groupId>
@@ -259,10 +259,6 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>applicationinsights-runtime-attach</artifactId>
     </dependency>
     <dependency>
       <groupId>com.azure</groupId>
