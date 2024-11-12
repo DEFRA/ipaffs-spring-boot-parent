@@ -39,7 +39,7 @@
     <java.version>17</java.version>
 
     <tracesx.common.version>4.0.3</tracesx.common.version>
-    <tracesx.common.security.version>4.0.6</tracesx.common.security.version>
+    <tracesx.common.security.version>4.0.7.18686-SNAPSHOT</tracesx.common.security.version>
     <tracesx.notification.schema.version>4.0.37</tracesx.notification.schema.version>
     <applicationinsights-core.version>3.4.19</applicationinsights-core.version>
     <azure.springboot.metricsstarter.version>2.3.5</azure.springboot.metricsstarter.version>
