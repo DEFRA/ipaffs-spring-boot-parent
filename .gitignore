@@ -3,3 +3,4 @@ target/
 settings.xml
 *.iml
 .DS_Store
+.vscode/settings.json

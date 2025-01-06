@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd;">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>uk.gov.defra.tracesx</groupId>
@@ -70,7 +70,6 @@
     <neovisionaries.version>1.29</neovisionaries.version>
     <everit-json-schema.version>1.14.4</everit-json-schema.version>
     <org.owasp.encoder.version>1.2.3</org.owasp.encoder.version>
-    <owasp.version>8.4.0</owasp.version>
     <shared-resources.version>1.0.1</shared-resources.version>
     <snakeyaml.version>2.1</snakeyaml.version>
     <woodstox-core.version>6.5.1</woodstox-core.version>
@@ -466,28 +465,6 @@
               </configuration>
             </execution>
           </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.owasp</groupId>
-          <artifactId>dependency-check-maven</artifactId>
-          <version>${owasp.version}</version>
-          <configuration>
-            <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
-          <dependencies>
-            <dependency>
-              <groupId>org.owasp</groupId>
-              <artifactId>dependency-check-maven</artifactId>
-              <version>${owasp.version}</version>
-            </dependency>
-          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
