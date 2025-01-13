@@ -46,7 +46,6 @@
     <azure.version>2.3.3</azure.version>
     <azureidentity.version>1.11.2</azureidentity.version>
     <checkstyle.version>10.12.2</checkstyle.version>
-    <client.runtime.version>1.7.14</client.runtime.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <equalsverifier.version>3.15.1</equalsverifier.version>
     <git-build-hook-maven-plugin.version>3.4.1</git-build-hook-maven-plugin.version>
@@ -138,11 +137,6 @@
         <groupId>com.azure</groupId>
         <artifactId>azure-identity</artifactId>
         <version>${azureidentity.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.microsoft.rest</groupId>
-        <artifactId>client-runtime</artifactId>
-        <version>${client.runtime.version}</version>
       </dependency>
       <dependency>
         <groupId>com.github.fge</groupId>
@@ -262,10 +256,6 @@
     <dependency>
       <groupId>com.azure</groupId>
       <artifactId>azure-identity</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.microsoft.rest</groupId>
-      <artifactId>client-runtime</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
