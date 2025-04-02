@@ -102,11 +102,9 @@ pipeline {
             step([$class: 'WsCleanup'])
         }
         failure {
-            notifyTeams('red', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'FAILED', 'mergeNotifications')
             updateGitlabCommitStatus name: 'build', state: 'failed'
         }
         success {
-            notifyTeams('green', "JOB: ${env.JOB_NAME} BUILD NUMBER: ${env.BUILD_NUMBER}", 'SUCCESS', 'mergeNotifications')
             updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
