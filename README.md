@@ -1,5 +1,9 @@
 # Spring Boot Parent
 
+| :warning: DEPRECATED           |
+|:----------------------------|
+| This library is no longer used - it is replaced by the `parent` module in the `spring-boot-common` repo |
+
 ## Introduction
 This repository contains the parent POM for Java based IPAFFS repositories, it extends the POM provided by Spring Boot
 
