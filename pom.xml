@@ -29,12 +29,12 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:https://giteux.azure.defra.cloud/imports/spring-boot-parent.git</connection>
+    <connection>scm:git:https://github.com/DEFRA/ipaffs-spring-boot-parent.git</connection>
     <tag>HEAD</tag>
   </scm>
 
   <properties>
-    <project.scm.id>gitlab</project.scm.id>
+    <project.scm.id>github</project.scm.id>
 
     <java.version>17</java.version>
 
