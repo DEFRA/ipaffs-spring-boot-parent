@@ -31,7 +31,7 @@ pipeline {
             steps {
                 build job: 'Code-secret-scanning',
                         parameters: [
-                                string(name: 'repository', value: "https://giteux.azure.defra.cloud/imports/$SERVICE_NAME" + ".git"),
+                                string(name: 'repository', value: gitGetUrl("${SERVICE_NAME}")),
                                 string(name: 'branch', value: "master")
                         ]
             }
