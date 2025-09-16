@@ -3,7 +3,7 @@
 
   <groupId>uk.gov.defra.tracesx</groupId>
   <artifactId>spring-boot-parent</artifactId>
-  <version>4.0.53</version>
+  <version>4.0.54-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>TracesX-Spring-Boot-Parent</name>
@@ -30,7 +30,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/DEFRA/ipaffs-spring-boot-parent.git</connection>
-    <tag>4.0.53-757</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
